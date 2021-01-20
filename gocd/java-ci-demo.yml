@@ -1,7 +1,7 @@
 format_version: 2
 pipelines:
   java-ci-demo-yml:
-    group: sample-pipelines
+    group: defaultGroup
     materials:
       backend: 
         git: https://github.com/danodic/java-ci-demo-app.git
