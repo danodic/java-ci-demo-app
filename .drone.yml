@@ -13,7 +13,7 @@ steps:
 - name: deploy package
   image: appleboy/drone-scp
   settings:
-    host: 192.168.56.200
+    host: 192.168.56.107
     username: ci
     password: ci
     port: 22
