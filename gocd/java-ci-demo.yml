@@ -26,6 +26,9 @@ pipelines:
                - build:
                    source: target/
                    destination: build
+               - test:
+                   source: target/surefire-reports/
+                   destination: test
               tasks:
                 - exec:
                     run_if: passed
