@@ -22,6 +22,10 @@ pipelines:
       - deploy:
           jobs:
             package:
+              artifacts:
+               - build:
+                   source: target/
+                   destination: build
               tasks:
                 - exec:
                     run_if: passed
