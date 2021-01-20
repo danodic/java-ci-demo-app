@@ -20,7 +20,6 @@ pipelines:
                       - compile
                       - test
       - package:
-          clean_workspace: true
           jobs:
             unit-test:
               tasks:
@@ -37,5 +36,5 @@ pipelines:
                     run_if: passed
                     command: scp
                     arguments:
-                      - target/ci-demo.jar
+                      - ./target/ci-demo.jar
                       - ci@192.168.56.107:/home/ci/gocd
