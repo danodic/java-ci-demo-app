@@ -19,3 +19,7 @@ steps:
     port: 22
     target: /home/ci/drone/
     source: target/*.jar
+    
+trigger:
+  branch:
+  - master
