@@ -18,7 +18,6 @@ pipelines:
                     arguments:
                       - clean compile test
       - deploy:
-        clean_workspace: true
           jobs:
             deploy:
               tasks:
