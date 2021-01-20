@@ -16,7 +16,9 @@ pipelines:
                     run_if: passed
                     command: mvn
                     arguments:
-                      - clean compile test
+                      - clean
+                      - compile
+                      - test
       - deploy:
           jobs:
             deploy:
