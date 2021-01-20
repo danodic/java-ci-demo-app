@@ -3,8 +3,9 @@ pipelines:
   java-ci-demo-yml:
     group: sample-pipelines
     materials:
-      backend: https://github.com/danodic/java-ci-demo-app.git
-      branch: main
+      backend: 
+        git: https://github.com/danodic/java-ci-demo-app.git
+        branch: main
     stages:
       - test:
         clean_workspace: true
