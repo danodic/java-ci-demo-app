@@ -1,0 +1,21 @@
+---
+kind: pipeline
+type: docker
+name: build, test and deploy
+
+steps:
+- name: unit test
+  image: docker pull maven:3.6-openjdk-11
+  commands:
+  - mvn test
+  - mvn clean compile package
+
+- name: deploy package
+  image: appleboy/drone-scp
+  settings:
+    host: 192.168.56.200
+    username: ci
+    password: ci
+    port: 22
+    target: /home/ci/drone/
+    source: target/*.jar
