@@ -19,17 +19,15 @@ pipelines:
                       - clean
                       - compile
                       - test
-      - package:
+      - deploy:
           jobs:
-            unit-test:
+            package:
               tasks:
                 - exec:
                     run_if: passed
                     command: mvn
                     arguments:
                       - package
-      - deploy:
-          jobs:
             deploy:
               tasks:
                 - exec:
