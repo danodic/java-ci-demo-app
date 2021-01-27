@@ -15,7 +15,8 @@ steps:
   settings:
     host: 192.168.56.107
     username: ci
-    password: ci
+    password:
+      from_secret: CI_PASSWORD
     port: 22
     target: /home/ci/drone/
     source: target/*.jar
