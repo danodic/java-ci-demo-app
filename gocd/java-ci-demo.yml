@@ -35,9 +35,3 @@ pipelines:
                     command: mvn
                     arguments:
                       - package
-                - exec:
-                    run_if: passed
-                    command: scp
-                    arguments:
-                      - ./target/ci-demo.jar
-                      - ci@192.168.56.107:/home/ci/gocd
